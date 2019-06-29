@@ -25,6 +25,8 @@ public class PlayerShip {
     //detecting collision
     private Rect hitbox;
 
+    private int shieldStrength;
+
 
 
     public PlayerShip(Context context,int screenX,int screenY){
@@ -41,6 +43,8 @@ public class PlayerShip {
 
         //Initialize the hit box
         hitbox= new Rect(x,y,bitmap.getWidth(),bitmap.getHeight());
+
+        shieldStrength=2;
 
     }
 
@@ -114,6 +118,17 @@ public class PlayerShip {
 
     public Rect getHitbox() {
         return hitbox;
+    }
+
+
+    public int getShieldStrength(){
+        return shieldStrength;
+    }
+
+    //To decrement the shield of the player
+
+    public void reduceShieldStrenght(){
+        shieldStrength--;
     }
 
 
